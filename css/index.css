@@ -1,0 +1,459 @@
+:root {
+  /* Paleta de Colores basada en las muestras */
+  --bg-primary: #fde5cb;       /* Blanco Crema / Hueso */
+  --color-caramel: #C08552;    /* Cafe Caramelo / Miel */
+  --color-medium-brown: #8C5A3C;/* Cafe Medio / Calido */
+  --color-dark-brown: #4B2E2B;  /* Cafe Oscuro / Chocolate */
+  --color-caramel-claro: #ffd8b6;    /* Cafe Caramelo / Miel */
+  /*                          FONTS                          */
+  --Titulos: 'Times New Roman';
+  --textos: 'Calibri Light (Títulos)';
+}
+
+
+  /*                          FONTS   titulos grande                        */
+@font-face {
+  font-family: 'Folker';
+  src: url('/folker/Folker.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+
+ /*                          FONTS   titulos grande                        */
+
+ html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+
+ *, *::before, *::after{
+    box-sizing: inherit;
+ }
+
+ body{
+    font-family: var(--textos);
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--color-caramel-claro);
+ }
+
+ /*                                   Globales                */
+
+ .contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+ }
+
+ a{
+    text-decoration: none;
+ }
+
+ h1{
+    font-size: 4.8rem;
+ }
+
+ h2{
+    font-size: 4rem;
+ }
+
+ h3{
+    font-size: 3.2rem;
+ }
+
+ h4{
+    font-size: 2.8rem;
+ }
+
+img{
+    max-width: 100%;
+}
+p{
+    font-family: var(--textos);
+}
+
+/**                              Utilidades                                  **/
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+ 
+/**                              Header                                   **/
+
+.header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.629), rgba(0, 0, 0, 0.558)),url(../img/header.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+   
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--bg-primary);
+    margin-top: 10rem;
+    font-family:var(--Titulos);
+
+}
+
+.header__texto h2{
+    font-size: 3rem;
+}
+
+.header__texto p{
+    font-size: 2rem;
+}
+
+.barra{
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__texto h2{
+        font-size: 7rem;
+    }
+}
+
+.logo{
+    font-family: 'folker';
+
+}
+
+.logo__nombre{
+   font-weight: 200;
+   color: var(--bg-primary);
+}
+
+.logo__bold{
+   font-weight: 700;
+   color: var(--color-caramel);
+}
+
+.logo__bold:hover{
+  color: transparent; 
+  background-image: url(../img/cafe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+}
+
+@media (min-width: 768px){
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+
+
+}
+
+
+.navegacion__enlace{
+    display: block;
+    transition: 1s;
+    width: 10rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--bg-primary);
+}
+
+.navegacion__enlace:hover{
+    background-color: var(--color-caramel);
+    border-radius: 3rem;
+
+}
+ @media (min-width: 768px){
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr ;
+        column-gap: 4rem;
+    }
+ }
+
+
+ .blog  h2{
+    font-family: 'folker';
+    color: var(--color-caramel);
+ }
+
+.cafes-sidebar{
+    margin-left: 22.9rem;
+}
+
+.principal-img{
+  margin-left: -11rem;
+  width: 77rem;
+}
+
+.entrada{
+    border-bottom: 1px solid var(--color-caramel);
+    margin-bottom: 5rem;
+}
+
+.entrada__contenido p{
+    text-align: justify;
+}
+
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.botton{
+    display: block;
+    font-family: var(--textos);
+    color: var(--bg-primary);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-radius: 5rem;
+    background-color:var(--color-dark-brown) ;
+    border: none;
+}
+
+.botton:hover{
+    color: transparent; 
+  background-image: url(../img/botton-fondo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+@media ( min-width: 768px ){
+    .botton{
+        display: inline-block;
+    }
+}
+
+
+.cursos{
+    list-style: none;
+}
+
+
+
+.widget-curso{
+    border-bottom: 1px solid var(--color-medium-brown);
+    margin-bottom: 2rem;
+
+}
+
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-curso__info{
+    font-weight: normal;
+}
+
+
+.widget__label{
+    font-family: var(--Titulos);
+    font-weight: bold;
+}
+
+.widget-curso__info, widget__label{
+    font-size: 2rem;
+}
+
+.cursos h4, h2{
+    line-height: 5rem;
+}
+
+.sidebar h2{
+    color: var(--color-caramel);
+}
+
+.footer{
+    background-color: var(--color-dark-brown);
+    padding-bottom: 1rem;
+    margin-top: 4rem;
+}
+
+
+/**                          SOBRE NOSOTROS                             **/
+
+ 
+
+
+@media (min-width: 768px){
+    
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+}
+
+
+
+.sobre-nosotros__texto{
+ text-align: justify;
+
+}
+
+.sobre-nosotros__texto p{
+    margin-top: -1rem;
+}
+
+.sobre-nosotros__texto
+.sobre-nosotros__img{
+    flex-basis: 50%;
+}
+
+
+.centrar-texto{
+    font-family: 'folker';
+    color: var(--color-caramel);
+}
+
+
+/**                          CURSOS                            **/
+
+.curso h4{
+    color: var(--bg-primary);
+    font-family: var(--Titulos);
+}
+
+.curso__descripcion{
+    font-family: var(--textos);
+    font-size: 2rem;
+    text-align: justify;
+
+}
+
+
+.primero{
+    background-color: #4B2E2B;
+}
+
+.primero p{
+    color: var(--color-caramel);
+}
+
+.segundo{
+background-color: var(--color-caramel);
+}
+
+.segundo p{
+    color: var(--color-dark-brown);
+}
+.tercero {
+    background-color: var(--color-dark-brown);
+}
+
+.tercero p{
+    color: var(--color-caramel);
+}
+
+.cuarto{
+    background-color: var(--color-caramel);
+}
+
+
+.cuarto p{
+ color: var(--color-dark-brown);
+}
+
+.curso__img{
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.curso{
+ display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem; /* Reducido para que el cuadro no sea tan alto */
+  margin: 1.5rem auto;   /* "auto" lo mantiene centrado en la pantalla */
+  max-width: 100rem;     /* Reduce el ancho máximo de la tarjeta */
+  border-radius: 3rem;  /* Bordes un poco más ajustados */
+  border: 7px dotted var(--bg-primary);
+}
+
+@media (min-width: 768px){
+    .curso{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .curso__img{
+        width: 50rem; /* Tamaño más grande para la imagen */
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .curso__informacion{
+        flex: 1; 
+    }
+}
+
+
+/**                          CONTACTO                           **/
+
+
+.contacto-bg{
+    background-image: url(../img/banner.webp);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.formulario{
+    background-color: var(--color-caramel-claro);
+    margin: -10rem auto 0 auto ;
+    width: 80%;
+    padding: 5rem;
+   
+
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    
+    
+
+}
+
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+     font-family: var(--Titulos);
+     color: var(--color-dark-brown);
+    
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--color-caramel);
+    border-radius: 1rem;
+}
+
+.campo__field--textarea{
+    height: 20rem;
+}
